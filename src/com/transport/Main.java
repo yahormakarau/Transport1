@@ -47,6 +47,7 @@ public class Main {
         Sorting sort = new Sorting();
         sort.sortByPrice(allTransport);
         for(Transport transport: allTransport){
+            System.out.println("Отсортированный список транспорта:");
             System.out.println(transport.getName() + " : " + transport.getPrice());
         }
         }
