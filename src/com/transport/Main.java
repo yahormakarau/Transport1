@@ -1,6 +1,7 @@
 package com.transport;
 
 import counters.Sails;
+import counters.Sorting;
 import counters.Wheels;
 import land.transport.Paxcar;
 import land.transport.Scooter;
@@ -43,7 +44,11 @@ public class Main {
         allTransport.add(paxcar);
         allTransport.add(truck);
 
-
+        Sorting sort = new Sorting();
+        sort.sortByPrice(allTransport);
+        for(Transport transport: allTransport){
+            System.out.println(transport.getName() + " : " + transport.getPrice());
+        }
         }
     }
 
