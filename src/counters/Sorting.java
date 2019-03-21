@@ -36,7 +36,7 @@ public class Sorting {
         for ( int i = 0; i < histransport.size(); i++ ){
             int j = i - 1;
 
-            while ((j >= 0) && (histransport.get(i).getPrice()) > (histransport.get(j).getPrice())){
+            while (j >= 0 && histransport.get(i).getPrice() < histransport.get(j).getPrice()){
                 histransport.set(j, histransport.get(j+1));
                 histransport.set(j+1, histransport.get(j));
                 j--;
