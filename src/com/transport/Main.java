@@ -57,5 +57,10 @@ public class Main {
             System.out.println(str.getName() + " : " + str.getPrice());
         }
 
+        sort.insersionSort(allTransport);
+        for (Transport pr: allTransport) {
+            System.out.println("Отсортированный список транспорта(insertion):");
+            System.out.println(pr.getName() + " : " + pr.getPrice());
+        }
     }
 }
