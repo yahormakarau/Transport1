@@ -16,7 +16,7 @@ public class Main {
     public static void main(String[] args) {
         List<Transport> landTransport = new ArrayList<>();
 
-        Scooter scooter = new Scooter ("Трековый", "мини", 5000, 2);
+        Scooter scooter = new Scooter("Трековый", "мини", 5000, 2);
         Paxcar paxcar = new Paxcar("Легковушка", "медиум", 13500, 4);
         Truck truck = new Truck("трак", "большой", 23000, 6);
 
@@ -46,10 +46,16 @@ public class Main {
 
         Sorting sort = new Sorting();
         sort.sortByPrice(allTransport);
-        for(Transport transport: allTransport){
+        for (Transport transport : allTransport) {
             System.out.println("Отсортированный список транспорта:");
             System.out.println(transport.getName() + " : " + transport.getPrice());
         }
-        }
-    }
 
+        sort.bubbleSorting(allTransport);
+        for (Transport str : allTransport) {
+            System.out.println("Отсортированный список транспорта(bubble):");
+            System.out.println(str.getName() + " : " + str.getPrice());
+        }
+
+    }
+}

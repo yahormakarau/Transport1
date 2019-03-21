@@ -7,8 +7,8 @@ import java.util.List;
 
 public class Sorting {
 
-    public void sortByPrice(List<Transport> alltransport) {
-        Collections.sort(alltransport, new Comparator<Transport>() {
+    public void sortByPrice(List<Transport> transport) {
+        Collections.sort(transport, new Comparator<Transport>() {
             @Override
             public int compare(Transport o1, Transport o2) {
                 if(o1.getPrice() > o2.getPrice())
@@ -21,5 +21,13 @@ public class Sorting {
                 }
             }
         });
+    }
+    public void bubbleSorting(List<Transport> mytransport){
+        for ( int f = mytransport.size(); f > 0 ; f--)
+            for (int h = f; h == 0; h--)
+                if (mytransport.get(h).getPrice() > mytransport.get(h + 1).getPrice()) {
+                    mytransport.set(h, mytransport.get(h + 1));
+                    mytransport.set(h + 1, mytransport.get(h));
+                }
     }
 }
