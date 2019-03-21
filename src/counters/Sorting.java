@@ -24,7 +24,7 @@ public class Sorting {
     }
     public void bubbleSorting(List<Transport> mytransport){
         for ( int f = mytransport.size(); f > 0 ; f--)
-            for (int h = f; h == 0; h--)
+            for (int h = f; h < 0; h--)
                 if (mytransport.get(h).getPrice() > mytransport.get(h + 1).getPrice()) {
                     mytransport.set(h, mytransport.get(h + 1));
                     mytransport.set(h + 1, mytransport.get(h));
